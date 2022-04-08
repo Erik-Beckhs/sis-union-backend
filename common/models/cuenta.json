@@ -1,0 +1,51 @@
+{
+  "name": "cuenta",
+  "plural": "cuentas",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number"
+    },
+    "id_cliente": {
+      "type": "number",
+      "required": true
+    },
+    "tipo_prod": {
+      "type": "number",
+      "required": true
+    },
+    "num_cuenta": {
+      "type": "string",
+      "required": true
+    },
+    "moneda": {
+      "type": "string",
+      "required": true
+    },
+    "monto": {
+      "type": "number",
+      "required": true
+    },
+    "fecha_creacion": {
+      "type": "date",
+      "required": true
+    },
+    "sucursal": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "cliente": {
+      "type": "belongsTo",
+      "model": "cliente",
+      "foreignKey": "id_cliente"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

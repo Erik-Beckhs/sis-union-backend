@@ -1,0 +1,48 @@
+{
+  "name": "cliente",
+  "plural": "clientes",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number"
+    },
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "paterno": {
+      "type": "string",
+      "required": true
+    },
+    "materno": {
+      "type": "string"
+    },
+    "tipo_doc": {
+      "type": "number"
+    },
+    "doc_identidad": {
+      "type": "string",
+      "required": true
+    },
+    "fecha_nac": {
+      "type": "date"
+    },
+    "genero": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "cuenta": {
+      "type": "hasMany",
+      "model": "cuenta",
+      "foreignKey": "id_cliente"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
