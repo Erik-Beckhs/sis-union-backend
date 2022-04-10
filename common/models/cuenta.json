@@ -11,8 +11,7 @@
       "type": "number"
     },
     "id_cliente": {
-      "type": "number",
-      "required": true
+      "type": "number"
     },
     "tipo_prod": {
       "type": "number",
@@ -31,8 +30,7 @@
       "required": true
     },
     "fecha_creacion": {
-      "type": "date",
-      "required": true
+      "type": "date"
     },
     "sucursal": {
       "type": "number"
